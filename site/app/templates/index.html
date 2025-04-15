@@ -1,0 +1,19 @@
+<!-- app/templates/index.html -->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Blog UVV</title>
+        {% else %}
+        <title>Bem vindo ao Blog UVV!</title>
+        {% endif %}
+    </head>
+<body>
+    <h1>Ola, {{ user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} disse: <b>{{ post.body }}</b></p></←-
+    div>
+    {% endfor %}
+</body>
+</html>
